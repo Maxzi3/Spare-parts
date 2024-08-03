@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "image": "https://example.com/images/product1.jpg",
+    "image": "../breakpad.jpeg",
     "productName": "Brake Pads",
     "partNumber": "BP123",
     "vehicleType": "Volvo XC90",
@@ -9,7 +9,7 @@
   },
   {
     "id": 2,
-    "image": "https://example.com/images/product2.jpg",
+    "image": "../Airfilter.jpeg",
     "productName": "Air Filter",
     "partNumber": "AF456",
     "vehicleType": "Volvo S60",
@@ -17,7 +17,7 @@
   },
   {
     "id": 3,
-    "image": "https://example.com/images/product3.jpg",
+    "image": "../Sparkplug.jpeg",
     "productName": "Spark Plug",
     "partNumber": "SP789",
     "vehicleType": "Volvo V60",
@@ -25,7 +25,7 @@
   },
   {
     "id": 4,
-    "image": "https://example.com/images/product4.jpg",
+    "image": "../oilfilter.jpeg",
     "productName": "Oil Filter",
     "partNumber": "OF101",
     "vehicleType": "Volvo XC90",
@@ -33,7 +33,7 @@
   },
   {
     "id": 5,
-    "image": "https://example.com/images/product5.jpg",
+    "image": "../headlightbulb.jpeg",
     "productName": "Headlight Bulb",
     "partNumber": "HB202",
     "vehicleType": "Volvo S60",
@@ -41,7 +41,7 @@
   },
   {
     "id": 6,
-    "image": "https://example.com/images/product6.jpg",
+    "image": "../windshieldwiper.jpeg",
     "productName": "Windshield Wipers",
     "partNumber": "WW303",
     "vehicleType": "Volvo V60",
@@ -49,7 +49,7 @@
   },
   {
     "id": 7,
-    "image": "https://example.com/images/product7.jpg",
+    "image": "../battery.jpeg",
     "productName": "Battery",
     "partNumber": "BT404",
     "vehicleType": "Volvo XC90",
@@ -57,7 +57,7 @@
   },
   {
     "id": 8,
-    "image": "https://example.com/images/product8.jpg",
+    "image": "../radiator.jpeg",
     "productName": "Radiator",
     "partNumber": "RD505",
     "vehicleType": "Volvo S60",
@@ -65,7 +65,7 @@
   },
   {
     "id": 9,
-    "image": "https://example.com/images/product9.jpg",
+    "image": "../breakrotor.jpeg",
     "productName": "Brake Rotor",
     "partNumber": "BR606",
     "vehicleType": "Volvo V60",
@@ -73,7 +73,7 @@
   },
   {
     "id": 10,
-    "image": "https://example.com/images/product10.jpg",
+    "image": "../alternator.jpeg",
     "productName": "Alternator",
     "partNumber": "AL707",
     "vehicleType": "Volvo XC90",
@@ -81,7 +81,7 @@
   },
   {
     "id": 11,
-    "image": "https://example.com/images/product11.jpg",
+    "image": "../timingbelt.jpeg",
     "productName": "Timing Belt",
     "partNumber": "TB808",
     "vehicleType": "Volvo S60",
@@ -89,7 +89,7 @@
   },
   {
     "id": 12,
-    "image": "https://example.com/images/product12.jpg",
+    "image": "../fuelpump.jpeg",
     "productName": "Fuel Pump",
     "partNumber": "FP909",
     "vehicleType": "Volvo V60",
@@ -97,7 +97,7 @@
   },
   {
     "id": 13,
-    "image": "https://example.com/images/product13.jpg",
+    "image": "../waterpump.jpeg",
     "productName": "Water Pump",
     "partNumber": "WP010",
     "vehicleType": "Volvo XC90",
@@ -105,7 +105,7 @@
   },
   {
     "id": 14,
-    "image": "https://example.com/images/product14.jpg",
+    "image": "../exhaustpipe.jpeg",
     "productName": "Exhaust Pipe",
     "partNumber": "EP111",
     "vehicleType": "Volvo S60",
@@ -113,15 +113,15 @@
   },
   {
     "id": 15,
-    "image": "https://example.com/images/product15.jpg",
-    "productName": "Clutch Kit",
+    "image": "../bushing.jpeg",
+    "productName": "Bushing",
     "partNumber": "CK212",
-    "vehicleType": "Volvo V60",
+    "vehicleType": "Volvo XC90",
     "description": "Complete clutch kit for smooth gear shifting."
   },
   {
     "id": 16,
-    "image": "https://example.com/images/product16.jpg",
+    "image": "../shockabsorber.jpeg",
     "productName": "Shock Absorber",
     "partNumber": "SA313",
     "vehicleType": "Volvo XC90",
@@ -129,7 +129,7 @@
   },
   {
     "id": 17,
-    "image": "https://example.com/images/product17.jpg",
+    "image": "../sterlingrack.jpeg",
     "productName": "Steering Rack",
     "partNumber": "SR414",
     "vehicleType": "Volvo S60",
@@ -137,7 +137,7 @@
   },
   {
     "id": 18,
-    "image": "https://example.com/images/product18.jpg",
+    "image": "../controlarm.jpeg",
     "productName": "Control Arm",
     "partNumber": "CA515",
     "vehicleType": "Volvo V60",
@@ -145,7 +145,7 @@
   },
   {
     "id": 19,
-    "image": "https://example.com/images/product19.jpg",
+    "image": "../turbocharger.jpeg",
     "productName": "Turbocharger",
     "partNumber": "TC616",
     "vehicleType": "Volvo XC90",
@@ -153,7 +153,7 @@
   },
   {
     "id": 20,
-    "image": "https://example.com/images/product20.jpg",
+    "image": "../camshaft.jpeg",
     "productName": "Camshaft",
     "partNumber": "CS717",
     "vehicleType": "Volvo S60",

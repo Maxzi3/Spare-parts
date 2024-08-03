@@ -1,5 +1,6 @@
 import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 import Product from "../Products.json";
 
 const Section5 = ({ isHome}) => {
@@ -18,7 +19,7 @@ const Section5 = ({ isHome}) => {
           >
             <img
               className="lg:h-48 md:h-36 w-full object-cover object-center"
-              src="/Volvo.jpeg"
+              src={product.image}
               alt={product.productName}
             ></img>
             <div className="p-6">
@@ -30,12 +31,12 @@ const Section5 = ({ isHome}) => {
               </h1>
               <p className="leading-relaxed mb-3">{product.description}</p>
               <div className="flex justify-between items-center text-sm">
-                <a
-                  href="/Contact"
+                <Link
+                  to="/Contact"
                   className="text-secondary hover:text-gray-900 inline-flex items-center md:mb-2 lg:mb-0"
                 >
                   Buy <FaArrowRight className="ml-2 animate-bounce" />
-                </a>
+                </Link>
                 <span>{product.partNumber}</span>
               </div>
             </div>

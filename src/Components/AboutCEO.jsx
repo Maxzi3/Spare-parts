@@ -4,9 +4,9 @@ const AboutCEO = () => {
   return (
     <div className="flex md:flex-row flex-col md:gap-10 items-center p-10  rounded-lg md:w-3/4 w-full shadow-lg mx-auto text-orange-600">
       <img
-        src="https://via.placeholder.com/150"
+        src="./ceo.jpeg"
         alt="IK Ben"
-        className="rounded-full mb-4"
+        className="rounded-full mb-4 md:w-1/2"
       />
       <div >
         <h1 className="text-3xl font-bold text-secondary mb-2">IK WELL</h1>
