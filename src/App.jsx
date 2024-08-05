@@ -5,6 +5,7 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
+import "aos/dist/aos.css";
 import Mainlayout from "./Layout/Mainlayout";
 import NotFoundPage from "./Pages/NotFoundPage";
 import HomePage from "./Pages/HomePage";

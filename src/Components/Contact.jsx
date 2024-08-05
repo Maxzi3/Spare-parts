@@ -3,16 +3,26 @@ import {
   FaFacebookF,
   FaInstagram,
   FaTwitter,
-  FaGithub,
   FaBuilding,
   FaPhone,
   FaEnvelope,
 } from "react-icons/fa";
+import { useEffect } from "react";
+import Aos from "aos";
 
 const Contact = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 1000, // Animation duration in milliseconds
+      once: true,
+    });
+  }, []);
   return (
     <div className="flex md:flex-row flex-col text-orange-600 my-20 justify-center">
-      <div className="bg-bg2 md:w-96 w-full h-auto md:mx-10 mb-10 bg-center bg-cover">
+      <div
+        className="bg-bg2 md:w-96 w-full h-auto md:mx-10 mb-10 bg-center bg-cover"
+        data-aos="flip-left"
+      >
         <div className="bg-black h-auto text-white opacity-70">
           <h1 className="text-center text-2xl text-orange-500 py-6 font-bold">
             CONTACT DETAILS
@@ -45,12 +55,14 @@ const Contact = () => {
               <FaFacebookF className="text-3xl" />
               <FaTwitter className="text-3xl" />
               <FaInstagram className="text-3xl" />
-              <FaGithub className="text-3xl" />
             </span>
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center p-10 bg-gray-100 rounded-lg shadow-lg">
+      <div
+        className="flex flex-col items-center p-10 bg-gray-100 rounded-lg shadow-lg"
+        data-aos="flip-right"
+      >
         <h1 className="text-2xl font-bold text-secondary mb-4">
           Message Us, we will be with you shortly
         </h1>

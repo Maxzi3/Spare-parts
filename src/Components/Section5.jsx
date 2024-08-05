@@ -2,8 +2,15 @@ import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import Product from "../Products.json";
-
+import { useEffect } from "react";
+import Aos from "aos";
 const Section5 = ({ isHome}) => {
+   useEffect(() => {
+     Aos.init({
+       duration: 1000, // Animation duration in milliseconds
+       once: true,
+     });
+   }, []);
   const recentProducts = isHome ? Product.slice(0, 3) : Product;
 
   return (
@@ -16,6 +23,7 @@ const Section5 = ({ isHome}) => {
           <div
             key={product.id}
             className="border-2 border-primary shadow-lg border-opacity-60 rounded-lg overflow-hidden"
+            data-aos="fade-up"
           >
             <img
               className="lg:h-48 md:h-36 w-full object-cover object-center"

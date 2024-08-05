@@ -1,18 +1,29 @@
 import React from "react";
 import {} from "react-icons/fa6";
 import { FaUserLarge } from "react-icons/fa6";
+import { useState, useEffect } from "react";
+import Aos from "aos";
 
 const About = () => {
+   useEffect(() => {
+     Aos.init({
+       duration: 1000, // Animation duration in milliseconds
+       once: true,
+     });
+   }, []);
   return (
     <div className="flex md:flex-row items-center flex-col gap-10 md:w-11/12 w-full md:mx-auto md:p-10 my-10 text-orange-600 shadow-lg ">
-      <div className="bg-bg2 w-9/12 h-96 md:mx-10 mb-10 bg-center bg-cover relative">
+      <div
+        className="bg-bg2 w-9/12 h-96 md:mx-10 mb-10 bg-center bg-cover relative"
+        data-aos="flip-left"
+      >
         <img
           className="md:w-2/3 absolute -bottom-10 left-10 md:left-60"
           src="/img-3.jpeg"
           alt=""
         />
       </div>
-      <div className="md:w-1/2 md:mx-auto ">
+      <div className="md:w-1/2 md:mx-auto" data-aos="fade-up">
         <h1 className="line-before font-medium text-center md:text-xl">
           ABOUT US
         </h1>

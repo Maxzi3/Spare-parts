@@ -1,21 +1,30 @@
 import React from "react";
+import {  useEffect } from "react";
+import Aos from "aos";
 
 const AboutCEO = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 1000, // Animation duration in milliseconds
+      once: true,
+    });
+  }, []);
   return (
     <div className="flex md:flex-row flex-col md:gap-10 items-center p-10  rounded-lg md:w-3/4 w-full shadow-lg mx-auto text-orange-600">
       <img
         src="./ceo.jpeg"
         alt="IK Ben"
         className="rounded-full mb-4 md:w-1/2"
+        data-aos="zoom-in"
       />
-      <div >
+      <div data-aos="fade-up">
         <h1 className="text-3xl font-bold text-secondary mb-2">IK WELL</h1>
         <h2 className="text-xl font-semibold text-secondary mb-2">
           FOUNDER AND CEO OF IYKEWELL VENTURES
         </h2>
         <p className="md:text-lg text-sm ">
-          IK(IKECHUKWU) has been in the business for over 20 years, bringing a wealth
-          of experience and expertise to IYKewell Ventures. Known for his
+          IK(IKECHUKWU) has been in the business for over 20 years, bringing a
+          wealth of experience and expertise to IYKewell Ventures. Known for his
           visionary leadership and innovative approach, IK has led the company
           to new heights, establishing it as a leader in the industry. His
           commitment to excellence, customer satisfaction, and ethical business

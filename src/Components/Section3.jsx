@@ -1,6 +1,14 @@
 import React from 'react'
+import {  useEffect } from "react";
+import Aos from "aos";
 
 const Section3 = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 1000, // Animation duration in milliseconds
+      once: true,
+    });
+  }, []);
   return (
     <div className="bg-bg1 w-full h-96 bg-fixed opacity-100 relative md:top-0  top-96 md:mb-0 mb-96">
       <div className="bg-black opacity-80 w-full h-96">
@@ -12,7 +20,10 @@ const Section3 = () => {
           experience. From engine components to suspension
         </p>
       </div>
-      <div className="absolute bottom-80 md:relative md:bottom-40 flex md:flex-row flex-col md:w-11/12 w-10/12 md:my-32 md:mx-16 mx-8 md:gap-5 gap-8 text-white bg-orange-500 md:p-2 p-4">
+      <div
+        className="absolute bottom-80 md:relative md:bottom-40 flex md:flex-row flex-col md:w-11/12 w-10/12 md:my-32 md:mx-16 mx-8 md:gap-5 gap-8 text-white bg-orange-500 md:p-2 p-4"
+        data-aos="fade-up"
+      >
         <div className="flex items-center gap-4 py-5 px-12 border-r-2">
           <h1 className="text-4xl font-bold">2500+</h1>
           <h1 className="text-xl w-24">Brand Product</h1>

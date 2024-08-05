@@ -2,11 +2,22 @@ import React from 'react'
 import { FaLightbulb } from "react-icons/fa6";
 import { FaHackerrank } from "react-icons/fa6";
 import { FaChartSimple } from "react-icons/fa6";
+import { useEffect } from "react";
+import Aos from "aos";
 
 
 const Section6 = () => {
+   useEffect(() => {
+     Aos.init({
+       duration: 1000, // Animation duration in milliseconds
+       once: true,
+     });
+   }, []);
   return (
-    <div className="flex md:flex-row flex-col gap-4 w-10/12 mx-auto shadow-lg">
+    <div
+      className="flex md:flex-row flex-col gap-4 w-10/12 mx-auto mt-44"
+      data-aos="fade-up"
+    >
       <div className="text-orange-600 p-4">
         <FaLightbulb className="text-4xl mb-4" />
         <h1 className="font-bold text-xl mb-2">Our Vision</h1>

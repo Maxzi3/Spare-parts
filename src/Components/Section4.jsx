@@ -1,10 +1,18 @@
 import React from "react";
 import {} from "react-icons/fa6";
+import { useEffect } from "react";
+import Aos from "aos";
 
 const Section4 = () => {
+   useEffect(() => {
+     Aos.init({
+       duration: 1000, // Animation duration in milliseconds
+       once: true,
+     });
+   }, []);
   return (
     <div className="flex md:flex-row flex-col gap-10 md:w-11/12 w-full md:mx-auto md:p-10 my-14 text-orange-600 shadow-lg ">
-      <div className="md:w-1/2 md:mx-auto mx-14">
+      <div className="md:w-1/2 md:mx-auto mx-14" data-aos="fade-up">
         <h1 className="line-before font-medium md:text-center md:text-xl">
           Why Choose Us
         </h1>
@@ -30,11 +38,14 @@ const Section4 = () => {
           </li>
         </ul>
       </div>
-      <div className="bg-bg2 md:w-8/12 w-full h-96 md:h-auto md:mx-10 mb-10 bg-center bg-cover relative">
+      <div
+        className="bg-bg2 md:w-8/12 w-full h-96 md:h-auto md:mx-10 mb-10 bg-center bg-cover relative"
+        data-aos="flip-right"
+      >
         <img
           className="md:w-1/2 absolute -bottom-10 -left-10 border-8 border-white"
           src="/img-1.jpeg"
-          alt=""
+          alt="Choose Us"
         />
       </div>
     </div>

@@ -1,15 +1,18 @@
 import React from "react";
 import {  FaPhoneVolume, FaWallet, FaFileLines, FaLock } from "react-icons/fa6";
-// import useIntersectionObserver from "./useIntersectionObserver";
+import { useEffect } from "react";
+import Aos from "aos";
 
 const Section2 = () => {
-//   const { ref, isIntersecting } = useIntersectionObserver();
+useEffect(() => {
+  Aos.init({
+    duration: 1000, // Animation duration in milliseconds
+    once: true,
+  });
+}, []);
 
   return (
-    <div
-    //   ref={ref}
-    //   className={`${isIntersecting ? "animate-fadeInBottom" : ""}`}
-    >
+    <div data-aos="fade-up">
       <h1 className="text-center line-before text-2xl text-orange-600 font-bold pt-14">
         Our Services
       </h1>
