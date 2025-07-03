@@ -1,4 +1,4 @@
-import React from 'react'
+
 import {  useEffect } from "react";
 import Aos from "aos";
 
@@ -10,37 +10,37 @@ const Section3 = () => {
     });
   }, []);
   return (
-    <div className="bg-bg1 w-full h-96 bg-fixed opacity-100 relative md:top-0  top-96 md:mb-0 mb-96">
-      <div className="bg-black opacity-80 w-full h-96">
-        <h1 className="text-center pt-24 text-orange-500 md:text-5xl text-xl font-bold">
+    <div className="relative w-full bg-fixed opacity-100 bg-bg1 h-96 md:top-0 top-96 md:mb-0 mb-96">
+      <div className="w-full bg-black opacity-80 h-96">
+        <h1 className="pt-24 text-xl font-bold text-center text-orange-500 md:text-5xl">
           Car Parts That Exceed Your Expectations
         </h1>
-        <p className="text-center pt-8 md:px-56 px-16 pb-8 text-orange-500 md:text-xl text-sm font-extrabold">
+        <p className="px-16 pt-8 pb-8 text-sm font-extrabold text-center text-orange-500 md:px-56 md:text-xl">
           Our car parts are designed to provide you with the best driving
           experience. From engine components to suspension
         </p>
       </div>
       <div
-        className="absolute bottom-80 md:relative md:bottom-40 flex md:flex-row flex-col md:w-11/12 w-10/12 md:my-32 md:mx-16 mx-8 md:gap-5 gap-8 text-white bg-orange-500 md:p-2 p-4"
+        className="absolute flex flex-col w-10/12 gap-8 p-4 mx-8 text-white bg-orange-500 bottom-80 md:relative md:bottom-40 md:flex-row md:w-11/12 md:my-32 md:mx-16 md:gap-5 md:p-2"
         data-aos="fade-up"
       >
-        <div className="flex items-center gap-4 py-5 px-12 border-r-2">
-          <h1 className="text-4xl font-bold">2500+</h1>
-          <h1 className="text-xl w-24">Brand Product</h1>
+        <div className="flex items-center gap-4 px-12 py-5 border-r-2">
+          <h1 className="text-4xl font-bold">200+</h1>
+          <h1 className="w-24 text-xl">Brand Product</h1>
         </div>
-        <div className="flex  items-center gap-4 md:p-4 px-12 py-2 border-r-2">
+        <div className="flex items-center gap-4 px-12 py-2 border-r-2 md:p-4">
           <h1 className="text-4xl font-bold">
-            97<span>%</span>
+            99<span>%</span>
           </h1>
-          <h1 className="text-xl w-24 pr-32">Customer Satisfaction</h1>
+          <h1 className="w-24 pr-32 text-xl">Customer Satisfaction</h1>
         </div>
-        <div className="flex items-center gap-10 md:p-4 px-20  py-2 border-r-2 ">
+        <div className="flex items-center gap-10 px-20 py-2 border-r-2 md:p-4 ">
           <h1 className="text-4xl font-bold">2</h1>
-          <h1 className="text-xl w-24 pr-32">Offline Store</h1>
+          <h1 className="w-24 pr-32 text-xl">Offline Store</h1>
         </div>
-        <div className="flex items-center gap-4 md:p-4 px-12 py-2 ">
+        <div className="flex items-center gap-4 px-12 py-2 md:p-4 ">
           <h1 className="text-4xl font-bold">
-            75<span>+</span>
+            5<span>+</span>
           </h1>
           <h1 className="text-xl w-28">Professional Team</h1>
         </div>

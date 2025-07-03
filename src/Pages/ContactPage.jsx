@@ -1,4 +1,3 @@
-import React from 'react'
 import Contact from '../Components/Contact'
 import Map from '../Components/Map'
 

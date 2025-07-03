@@ -1,17 +1,19 @@
-import React from "react";
-
-const Banner = ({ title, paragraph }) => {  
+/* eslint-disable react/prop-types */
+const Banner = ({ title, paragraph }) => {
   return (
-    <div className="md:bg-custom-bg2 bg-custom-bg w-full h-auto bg-left bg-fixed md:bg-cover">
-      <div className="bg-black md:bg-gray-900 md:opacity-80 opacity-80 w-full h-auto">
-        <h1 className="text-left  md:w-1/2 w-full text-orange-500 text-2xl md:text-4xl font-bold md:font-bold pt-40 md:pt-52 pb-4 px-4">
-          {title}
-        </h1>
-        <p className="text-orange-600 text-left  md:w-1/2 font-semibold md:font-medium text-lg md:text-xl pb-44 px-4">
-          {paragraph}
-        </p>
+    <section className="relative w-full text-orange-600 bg-fixed bg-left bg-cover bg-custom-bg2 md:bg-center">
+      {/* Overlay */}
+      <div className="w-full h-full bg-black bg-opacity-80">
+        <div className="max-w-5xl px-6 py-32 mx-auto md:py-44">
+          <h1 className="mb-6 text-3xl font-bold text-orange-500 md:text-5xl">
+            {title}
+          </h1>
+          <p className="text-lg font-medium leading-relaxed text-orange-100 md:text-xl">
+            {paragraph}
+          </p>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

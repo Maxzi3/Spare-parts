@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Banner from '../Components/Banner'
 import Section2 from '../Components/Section2';
 import Section3 from '../Components/Section3';

@@ -1,54 +1,59 @@
-import React from "react";
-import {} from "react-icons/fa6";
-import { useEffect } from "react";
+import  { useEffect } from "react";
 import Aos from "aos";
 
 const Section4 = () => {
-   useEffect(() => {
-     Aos.init({
-       duration: 1000, // Animation duration in milliseconds
-       once: true,
-     });
-   }, []);
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   return (
-    <div className="flex md:flex-row flex-col gap-10 md:w-11/12 w-full md:mx-auto md:p-10 my-14 text-orange-600 shadow-lg ">
-      <div className="md:w-1/2 md:mx-auto mx-14" data-aos="fade-up">
-        <h1 className="line-before font-medium md:text-center md:text-xl">
-          Why Choose Us
-        </h1>
-        <h1 className="md:text-2xl text-sm text-center font-extrabold mb-4">
-          We Assign The best Engineer/Mechanical for The Job
-        </h1>
-        <ul className="list-disc md:py-4 md:text-xl text-gray-800">
-          <li className="mb-4">
-            We have a team of highly skilled and experienced engineers who are
-            experts in their respective fields.
-          </li>
-          <li className="mb-4">
-            Our engineers are well-versed in the latest technologies and tools,
-            ensuring that your project is completed efficiently and effectively.
-          </li>
-          <li className="mb-4">
-            We have a proven track record of delivering high-quality projects on
-            time and within budget.
-          </li>
-          <li className="mb-4">
-            Our engineers are passionate about their work and are committed to
-            providing exceptional
-          </li>
-        </ul>
+    <section className="w-full px-6 py-16 bg-white md:px-16 text-primary">
+      <div className="flex flex-col-reverse md:flex-row items-center gap-12 max-w-7xl mx-auto shadow-md rounded-lg overflow-hidden bg-[#fff9f5]">
+        {/* Text Section */}
+        <div className="w-full px-4 py-8 md:w-1/2 md:px-10" data-aos="fade-up">
+          <h2 className="mb-2 text-sm font-semibold tracking-wider text-orange-600 uppercase line-before md:text-base">
+            Why Choose Us
+          </h2>
+          <h1 className="mb-6 text-xl font-extrabold leading-snug text-center text-orange-600 md:text-3xl md:text-left">
+            We Assign the Best Engineer/Mechanic for the Job
+          </h1>
+          <ul className="space-y-4 text-sm text-gray-700 list-disc list-inside md:text-lg">
+            <li>
+              Highly skilled and experienced engineers specialized in various
+              fields.
+            </li>
+            <li>
+              Experts in the latest tools and technologies for efficient
+              delivery.
+            </li>
+            <li>
+              Proven record of delivering top-notch projects on time and within
+              budget.
+            </li>
+            <li>
+              Our team is passionate, dedicated, and driven by excellence.
+            </li>
+          </ul>
+        </div>
+
+        {/* Image Section */}
+        <div
+          className="relative w-full bg-center bg-cover md:w-1/2 h-80 md:h-auto"
+          style={{ backgroundImage: `url('/img-1.jpeg')` }}
+          data-aos="flip-right"
+        >
+          <div className="absolute inset-0 bg-black rounded-lg bg-opacity-30" />
+          <img
+            src="/img-1.jpeg"
+            alt="Choose Us"
+            className="absolute w-3/4 md:w-1/2 border-[6px] border-white rounded-lg shadow-lg bottom-[-40px] left-4 md:left-10"
+          />
+        </div>
       </div>
-      <div
-        className="bg-bg2 md:w-8/12 w-full h-96 md:h-auto md:mx-10 mb-10 bg-center bg-cover relative"
-        data-aos="flip-right"
-      >
-        <img
-          className="md:w-1/2 absolute -bottom-10 -left-10 border-8 border-white"
-          src="/img-1.jpeg"
-          alt="Choose Us"
-        />
-      </div>
-    </div>
+    </section>
   );
 };
 

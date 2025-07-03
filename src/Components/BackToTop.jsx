@@ -1,4 +1,4 @@
-import React from "react";
+
 import { useState, useEffect } from "react";
 import { FaArrowUp } from "react-icons/fa";
 
@@ -30,7 +30,7 @@ const BackToTop = () => {
     <div>
       {isVisible && (
         <FaArrowUp
-          className="fixed bottom-20 right-12 text-white  bg-orange-600 text-4xl p-2 rounded-full cursor-pointer animate-bounce"
+          className="fixed p-2 text-4xl text-white bg-orange-600 rounded-full cursor-pointer bottom-20 right-12 animate-bounce"
           onClick={scrollToTop}
         />
       )}

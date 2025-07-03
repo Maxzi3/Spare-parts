@@ -1,4 +1,3 @@
-import React from 'react'
 import Section5 from '../Components/Section5'
 
 const ProductsPage = () => {

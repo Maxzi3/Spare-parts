@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 
@@ -7,7 +6,7 @@ const ViewAll = () => {
     <div>
       <Link
         to="/Product"
-        className="text-white hover:text-secondary bg-orange-600 hover:bg-orange-800  block m-auto w-32 pl-5 py-3 rounded-full"
+        className="block w-32 py-3 pl-5 m-auto text-white bg-orange-600 rounded-full hover:text-secondary hover:bg-orange-800"
       >
         Load more
       </Link>

@@ -1,49 +1,50 @@
-import React from 'react'
-import { FaLightbulb } from "react-icons/fa6";
-import { FaHackerrank } from "react-icons/fa6";
-import { FaChartSimple } from "react-icons/fa6";
-import { useEffect } from "react";
+import  { useEffect } from "react";
+import { FaLightbulb, FaHackerrank, FaChartSimple } from "react-icons/fa6";
 import Aos from "aos";
 
-
 const Section6 = () => {
-   useEffect(() => {
-     Aos.init({
-       duration: 1000, // Animation duration in milliseconds
-       once: true,
-     });
-   }, []);
-  return (
-    <div
-      className="flex md:flex-row flex-col gap-4 w-10/12 mx-auto mt-44"
-      data-aos="fade-up"
-    >
-      <div className="text-orange-600 p-4">
-        <FaLightbulb className="text-4xl mb-4" />
-        <h1 className="font-bold text-xl mb-2">Our Vision</h1>
-        <p className="w-10/12">
-          Our vision is to create a world where everyone has access to quality
-          parts, regardless of their location and car type.
-        </p>
-      </div>
-      <div className="text-orange-600 p-4">
-        <FaHackerrank className="text-4xl mb-4" />
-        <h1 className="font-bold text-xl mb-2">Our Histroy</h1>
-        <p className="w-11/12">
-          Our history is a story of passion, dedication, and a commitment to
-          making a difference in the region
-        </p>
-      </div>
-      <div className="text-orange-600 p-4">
-        <FaChartSimple className="text-4xl mb-4" />
-        <h1 className="font-bold text-xl mb-2">Our Mission</h1>
-        <p className="w-10/12">
-          Our mission is to provide quality and reliable parts to the region,
-          reducing the wear and tear of cars in the region
-        </p>
-      </div>
-    </div>
-  );
-}
+  useEffect(() => {
+    Aos.init({ duration: 1000, once: true });
+  }, []);
 
-export default Section6
+  const info = [
+    {
+      icon: <FaLightbulb className="mb-4 text-4xl text-orange-600" />,
+      title: "Our Vision",
+      text: "To create a world where everyone has access to quality parts, regardless of location and car type.",
+    },
+    {
+      icon: <FaHackerrank className="mb-4 text-4xl text-orange-600" />,
+      title: "Our History",
+      text: "A story of passion, dedication, and commitment to making a difference in the region.",
+    },
+    {
+      icon: <FaChartSimple className="mb-4 text-4xl text-orange-600" />,
+      title: "Our Mission",
+      text: "To provide reliable parts that reduce wear and tear and extend vehicle life in our region.",
+    },
+  ];
+
+  return (
+    <section className="w-full py-20 bg-white" data-aos="fade-up">
+      <div className="grid grid-cols-1 gap-10 px-4 mx-auto max-w-7xl md:grid-cols-3">
+        {info.map((item, idx) => (
+          <div
+            key={idx}
+            className="p-6 text-center transition duration-300 bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg"
+          >
+            {item.icon}
+            <h2 className="mb-2 text-xl font-bold text-gray-800">
+              {item.title}
+            </h2>
+            <p className="text-base leading-relaxed text-gray-600">
+              {item.text}
+            </p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default Section6;

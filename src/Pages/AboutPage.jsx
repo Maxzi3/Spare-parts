@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Banner from '../Components/Banner'
 import AboutCEO from '../Components/AboutCEO'
 import About from '../Components/About'

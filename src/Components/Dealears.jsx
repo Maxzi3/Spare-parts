@@ -1,43 +1,43 @@
-import React from 'react'
-import { useEffect } from "react";
+import  { useEffect } from "react";
 import Aos from "aos";
 
 const Dealears = () => {
   useEffect(() => {
-    Aos.init({
-      duration: 1000, // Animation duration in milliseconds
-      once: true,
-    });
+    Aos.init({ duration: 1000, once: true });
   }, []);
+
   return (
-    <>
-      <div className="flex md:flex-row justify-center md:gap-20 flex-col items-center shamd:mt-20 relative md:top-0 ktop-96 my-32">
+    <section className="relative w-full px-6 py-16 bg-white md:py-32">
+      {/* Distributor Info */}
+      <div className="flex flex-col items-center justify-center gap-12 mx-auto md:flex-row max-w-7xl">
         <h1
-          className="md:text-4xl text-2xl font-bold text-orange-600 "
+          className="text-3xl font-bold text-center text-orange-600 uppercase md:text-5xl md:text-left"
           data-aos="flip-left"
         >
-          OFFICIAL DISTRIBUTOR
+          Official Distributor
         </h1>
         <img
           src="/img-4.jpeg"
           alt="Dealers"
-          className="md:w-1/2 w-full"
+          className="w-full rounded-lg md:w-1/2"
           data-aos="flip-right"
         />
       </div>
+
+      {/* VOLVO Badge Overlay */}
       <div
-        className=" relative md:bottom-80 bottom-60 md:right-5 block mx-auto w-80"
+        className="mt-20 md:mt-[-6rem] w-72 mx-auto text-center relative z-10"
         data-aos="fade-up"
-        >
-        <h1 className="text-7xl text-white bg-blue-950 font-bold p-5 rounded-md font-serif">
+      >
+        <div className="py-6 font-serif text-6xl font-bold text-white rounded-md shadow-lg bg-blue-950">
           VOLVO
-        </h1>
-        <p className="text-center font-semibold text-orange-600">
-          GENUINE VOLVO PARTS
+        </div>
+        <p className="mt-4 text-lg font-semibold text-orange-600">
+          Genuine Volvo Parts
         </p>
       </div>
-    </>
+    </section>
   );
-}
+};
 
-export default Dealears
+export default Dealears;

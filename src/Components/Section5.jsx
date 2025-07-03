@@ -1,57 +1,63 @@
-import React from "react";
+/* eslint-disable react/prop-types */
+import  { useEffect } from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import Product from "../Products.json";
-import { useEffect } from "react";
 import Aos from "aos";
-const Section5 = ({ isHome}) => {
-   useEffect(() => {
-     Aos.init({
-       duration: 1000, // Animation duration in milliseconds
-       once: true,
-     });
-   }, []);
-  const recentProducts = isHome ? Product.slice(0, 3) : Product;
+import Product from "../Products.json";
+
+const Section5 = ({ isHome }) => {
+  useEffect(() => {
+    Aos.init({ duration: 1000, once: true });
+  }, []);
+
+  const recentProducts = isHome ? Product.slice(0, 4) : Product;
 
   return (
-    <div className="p-4 md:mt-40 mt-12 mb-10">
-      <h1 className="line-before text-center md:p-10 p-5 text-2xl text-orange-600 font-bold">
-        Our Products
-      </h1>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-10/12 mx-auto ">
+    <section className="w-full px-4 py-16 bg-white">
+      {/* Title */}
+      <div className="mb-12 text-center">
+        <h2 className="pt-10 text-3xl font-bold text-orange-600 underline md:text-4xl underline-offset-8 decoration-primary">
+          Our Products
+        </h2>
+      </div>
+
+      {/* Grid of Products */}
+      <div className="grid max-w-5xl grid-cols-1 gap-8 mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {recentProducts.map((product) => (
           <div
             key={product.id}
-            className="border-2 border-primary shadow-lg border-opacity-60 rounded-lg overflow-hidden"
+            className="bg-white border border-primary border-opacity-60 rounded-lg shadow-md overflow-hidden transition-transform hover:scale-[1.02] duration-300"
             data-aos="fade-up"
           >
             <img
-              className="lg:h-48 md:h-36 w-full object-cover object-center"
+              className="object-cover object-center w-full h-48"
               src={product.image}
               alt={product.productName}
-            ></img>
-            <div className="p-6">
-              <h2 className="tracking-widest text-xs title-font font-medium mb-1">
+            />
+            <div className="p-5">
+              <h3 className="mb-1 text-xs text-gray-500 uppercase">
                 {product.vehicleType}
-              </h2>
-              <h1 className="title-font text-lg font-medium mb-3">
+              </h3>
+              <h2 className="mb-2 text-xl font-semibold text-gray-800">
                 {product.productName}
-              </h1>
-              <p className="leading-relaxed mb-3">{product.description}</p>
-              <div className="flex justify-between items-center text-sm">
+              </h2>
+              <p className="mb-4 text-sm text-gray-600">
+                {product.description}
+              </p>
+              <div className="flex items-center justify-between text-sm">
                 <Link
                   to="/Contact"
-                  className="text-secondary hover:text-gray-900 inline-flex items-center md:mb-2 lg:mb-0"
+                  className="flex items-center gap-1 font-medium transition-all text-secondary hover:text-primary"
                 >
-                  Buy <FaArrowRight className="ml-2 animate-bounce" />
+                  Buy <FaArrowRight className="text-xs animate-bounce" />
                 </Link>
-                <span>{product.partNumber}</span>
+                <span className="text-gray-500">{product.partNumber}</span>
               </div>
             </div>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,82 +1,76 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-  const linkclass = ({ isActive }) =>
-    isActive
-      ? " mr-5 hover:text-orange-800 px-3 py-2 overline"
-      : "mr-5 hover:text-orange-800 px-3 py-2  ";
-  return (
-    <div>
-      <header className="fixed top-0 left-0 right-0 z-50 text-white body-font w-full bg-orange-600">
-        <div className="container mx-auto flex flex-wrap p-1 flex-row items-center justify-between">
-          <NavLink
-            to="/"
-            className="flex flex-col  text-white font-medium items-center ml-3 text-sm  hover:text-orange-800  hover:bg-white"
-          >
-            <span className="text-xl">IKW</span>{" "}
-            <span className="border-t-2  border-orange-800 hover:border-white p-1">
-              {" "}
-              VENTURES
-            </span>
-          </NavLink>
-          <div className="md:hidden">
-            <button onClick={toggleMenu}>
-              {isOpen ? (
-                <FaTimes className="text-3xl text-primary mr-3" />
-              ) : (
-                <FaBars className="text-3xl text-primary mr-3" />
-              )}
-            </button>
-          </div>
-          {/* Mobile view for Menu  */}
-          <nav
-            className={`${
-              isOpen ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
-            } overflow-hidden transition-all duration-300 ease-in-out md:hidden flex flex-col items-end text-base w-full md:w-auto`}
-          >
-            <NavLink to="/" className={linkclass} onClick={toggleMenu}>
-              Home
-            </NavLink>
-            <NavLink to="/About" className={linkclass} onClick={toggleMenu}>
-              About Us
-            </NavLink>
-            <NavLink to="/Product" className={linkclass} onClick={toggleMenu}>
-              Products
-            </NavLink>
-            <NavLink to="/Contact" className={linkclass} onClick={toggleMenu}>
-              Contact
-            </NavLink>
-          </nav>
+  const toggleMenu = () => setIsOpen((prev) => !prev);
 
-          {/* Desktop menu links */}
-          <nav
-            className={`${
-              isOpen ? "block" : "hidden"
-            } hidden md:flex flex-col md:flex-row items-center text-base justify-center w-full md:w-auto`}
-          >
-            <NavLink to="/" className={linkclass} onClick={toggleMenu}>
-              Home
-            </NavLink>
-            <NavLink to="/About" className={linkclass} onClick={toggleMenu}>
-              About Us
-            </NavLink>
-            <NavLink to="/Product" className={linkclass} onClick={toggleMenu}>
-              Products
-            </NavLink>
-            <NavLink to="/Contact" className={linkclass} onClick={toggleMenu}>
-              Contact
-            </NavLink>
-          </nav>
+  const linkClass = ({ isActive }) =>
+    isActive
+      ? "text-white bg-orange-700 px-4 py-2 rounded-md font-semibold"
+      : "text-white hover:text-orange-300 px-4 py-2";
+
+  const closeMenu = () => setIsOpen(false);
+
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50 bg-orange-600 shadow-lg">
+      <div className="container flex items-center justify-between px-4 py-3 mx-auto md:py-4">
+        {/* Logo */}
+        <NavLink to="/" className="flex flex-col text-xl font-bold text-white">
+          <span>IKW</span>
+          <span className="pt-1 text-xs tracking-wide border-t border-white">
+            VENTURES
+          </span>
+        </NavLink>
+
+        {/* Hamburger Menu */}
+        <div className="md:hidden">
+          <button onClick={toggleMenu} aria-label="Toggle Menu">
+            {isOpen ? (
+              <FaTimes className="text-2xl text-white" />
+            ) : (
+              <FaBars className="text-2xl text-white" />
+            )}
+          </button>
         </div>
-      </header>
-    </div>
+
+        {/* Desktop Nav */}
+        <nav className="items-center hidden gap-6 md:flex">
+          <NavLink to="/" className={linkClass}>
+            Home
+          </NavLink>
+          <NavLink to="/About" className={linkClass}>
+            About Us
+          </NavLink>
+          <NavLink to="/Product" className={linkClass}>
+            Products
+          </NavLink>
+          <NavLink to="/Contact" className={linkClass}>
+            Contact
+          </NavLink>
+        </nav>
+      </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="flex flex-col gap-3 px-4 pb-4 bg-orange-600 md:hidden">
+          <NavLink to="/" className={linkClass} onClick={closeMenu}>
+            Home
+          </NavLink>
+          <NavLink to="/About" className={linkClass} onClick={closeMenu}>
+            About Us
+          </NavLink>
+          <NavLink to="/Product" className={linkClass} onClick={closeMenu}>
+            Products
+          </NavLink>
+          <NavLink to="/Contact" className={linkClass} onClick={closeMenu}>
+            Contact
+          </NavLink>
+        </div>
+      )}
+    </header>
   );
 };
 

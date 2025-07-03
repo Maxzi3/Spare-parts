@@ -1,4 +1,3 @@
-import React from "react";
 import {
   FaFacebookF,
   FaInstagram,
@@ -12,119 +11,128 @@ import Aos from "aos";
 
 const Contact = () => {
   useEffect(() => {
-    Aos.init({
-      duration: 1000, // Animation duration in milliseconds
-      once: true,
-    });
+    Aos.init({ duration: 1000, once: true });
   }, []);
+
   return (
-    <div className="flex md:flex-row flex-col text-orange-600 my-20 justify-center">
+    <section className="flex flex-col items-start justify-center w-11/12 gap-10 mx-auto my-20 text-orange-600 md:flex-row">
+      {/* Contact Info Card */}
       <div
-        className="bg-bg2 md:w-96 w-full h-auto md:mx-10 mb-10 bg-center bg-cover"
+        className="w-full overflow-hidden bg-center bg-cover rounded-lg shadow-lg md:w-96 bg-bg2"
         data-aos="flip-left"
       >
-        <div className="bg-black h-auto text-white opacity-70">
-          <h1 className="text-center text-2xl text-orange-500 py-6 font-bold">
+        <div className="h-full p-6 space-y-6 text-white bg-black bg-opacity-80">
+          <h2 className="text-2xl font-bold text-center text-orange-500">
             CONTACT DETAILS
-          </h1>
-          <div className="flex gap-2 mx-10 pb-10">
-            <FaBuilding className="text-3xl" />
+          </h2>
+
+          <div className="flex items-start gap-3">
+            <FaBuilding className="mt-1 text-xl" />
             <div>
-              <h1 className="">OUR OFFICE</h1>
-              <p className="w-40">23, Olakunle Str Papa Ajao Mushin.</p>
+              <h3 className="font-semibold">OUR OFFICE</h3>
+              <p className="text-sm">23, Olakunle Street, Papa Ajao Mushin</p>
             </div>
           </div>
-          <div className="flex gap-2 mx-10 pb-10">
-            <FaPhone className="text-3xl" />
+
+          <div className="flex items-start gap-3">
+            <FaPhone className="mt-1 text-xl" />
             <div>
-              <h1>Tel:</h1>
-              <p>08033056790</p>
-              <p>07086368131</p>
+              <h3 className="font-semibold">Tel:</h3>
+              <p className="text-sm">08033056790</p>
+              <p className="text-sm">07086368131</p>
             </div>
           </div>
-          <div className="flex gap-2 mx-10 pb-10">
-            <FaEnvelope className="text-3xl" />
+
+          <div className="flex items-start gap-3">
+            <FaEnvelope className="mt-1 text-xl" />
             <div>
-              <h1>Email</h1>
-              <p>ikwell2000@yahoo.com</p>
+              <h3 className="font-semibold">Email</h3>
+              <p className="text-sm">ikwell2000@yahoo.com</p>
             </div>
           </div>
-          <div>
-            <h1 className="text-center">Follow Our Social Media</h1>
-            <span className="flex flex-row gap-5 justify-center  pt-5 pb-20 md:pb-44">
-              <FaFacebookF className="text-3xl" />
-              <FaTwitter className="text-3xl" />
-              <FaInstagram className="text-3xl" />
-            </span>
+
+          <div className="pt-4 text-center">
+            <h3 className="mb-2 text-sm">Follow Our Social Media</h3>
+            <div className="flex justify-center gap-4 text-orange-500">
+              <FaFacebookF className="text-xl transition hover:text-white" />
+              <FaTwitter className="text-xl transition hover:text-white" />
+              <FaInstagram className="text-xl transition hover:text-white" />
+            </div>
           </div>
         </div>
       </div>
+
+      {/* Message Form */}
       <div
-        className="flex flex-col items-center p-10 bg-gray-100 rounded-lg shadow-lg"
+        className="flex-1 p-8 bg-gray-100 rounded-lg shadow-lg"
         data-aos="flip-right"
       >
-        <h1 className="text-2xl font-bold text-secondary mb-4">
-          Message Us, we will be with you shortly
-        </h1>
-        <form className="w-full max-w-lg">
-          <div className="mb-4">
-            <div className="flex flex-col">
-              <label htmlFor="name" className="text-lg font-semibold mb-2">
-                Name
-              </label>
-              <input
-                className="border border-gray-300 outline-none p-3 w-full mb-4 rounded-md"
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Enter your name"
-              />
-            </div>
+        <h2 className="mb-6 text-2xl font-bold text-center text-secondary">
+          Message Us — We’ll Get Back Shortly
+        </h2>
+
+        <form className="space-y-4">
+          <div>
+            <label className="block mb-1 font-semibold" htmlFor="name">
+              Name
+            </label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="Enter your name"
+              className="w-full p-3 border border-gray-300 rounded-md outline-none"
+            />
           </div>
-          <div className="mb-4">
-            <label htmlFor="email" className="text-lg font-semibold mb-2">
+
+          <div>
+            <label className="block mb-1 font-semibold" htmlFor="email">
               Email
             </label>
             <input
-              className="border border-gray-300 outline-none p-3 w-full mb-4 rounded-md"
-              type="email"
               id="email"
               name="email"
+              type="email"
               placeholder="Enter your email"
+              className="w-full p-3 border border-gray-300 rounded-md outline-none"
             />
           </div>
-          <div className="mb-4">
-            <label htmlFor="phone" className="text-lg font-semibold mb-2">
+
+          <div>
+            <label className="block mb-1 font-semibold" htmlFor="phone">
               Phone
             </label>
             <input
-              className="border border-gray-300 outline-none p-3 w-full mb-4 rounded-md"
-              type="tel"
               id="phone"
               name="phone"
+              type="tel"
               placeholder="Enter your phone number"
+              className="w-full p-3 border border-gray-300 rounded-md outline-none"
             />
           </div>
-          <div className="mb-4">
-            <label htmlFor="message" className="text-lg font-semibold mb-2">
+
+          <div>
+            <label className="block mb-1 font-semibold" htmlFor="message">
               Message
             </label>
             <textarea
-              className="border border-gray-300 outline-none p-3 w-full h-32 rounded-md"
               id="message"
               name="message"
-              placeholder="Write your message"
+              rows="5"
+              placeholder="Write your message..."
+              className="w-full p-3 border border-gray-300 rounded-md outline-none"
             ></textarea>
           </div>
+
           <button
             type="submit"
-            className="bg-orange-600 text-white hover:bg-white hover:text-orange-600 font-semibold py-2 px-4 rounded-md"
+            className="px-6 py-3 font-semibold text-white transition bg-orange-600 rounded-md hover:bg-white hover:text-orange-600"
           >
             Send Message
           </button>
         </form>
       </div>
-    </div>
+    </section>
   );
 };
 

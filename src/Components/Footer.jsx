@@ -1,10 +1,9 @@
-import React from "react";
+
 import {
   FaFacebookF,
   FaInstagram,
   FaTwitter,
   FaGithub,
-  FaArrowUp,
 } from "react-icons/fa";
 import BackToTop from "./BackToTop";
 
@@ -12,32 +11,32 @@ const Footer = () => {
   return (
     <div>
       <footer className="text-gray-600 body-font">
-        <div className="container px-5 py-10 mx-auto flex flex-col">
+        <div className="container flex flex-col px-5 py-10 mx-auto">
           <a
             to="/"
-            className="flex flex-col w-20 font-medium items-center ml-3 text-sm  hover:text-orange-800  hover:bg-white"
+            className="flex flex-col items-center w-20 ml-3 text-sm font-medium hover:text-orange-800 hover:bg-white"
           >
             <span className="text-xl">IKW</span>{" "}
-            <span className="border-t-2  border-orange-800 hover:border-white p-1">
+            <span className="p-1 border-t-2 border-orange-800 hover:border-white">
               VENTURES
             </span>
           </a>
-          <p className="mt-2 md:text-sm md:w-full w-64 text-gray-500">
+          <p className="w-64 mt-2 text-gray-500 md:text-sm md:w-full">
             &copy; 2024 IYKE WELL VENTURES NIG.LTD All rights reserved.
           </p>
           <BackToTop />
         </div>
-        <div className="bg-orange-600 text-gray-700">
-          <div className="container mx-auto py-4 px-5 flex flex-row justify-between items-center">
+        <div className="text-gray-700 bg-orange-600">
+          <div className="container flex flex-row items-center justify-between px-5 py-4 mx-auto">
             <a
               href="https://wa.me/2348033056790"
               target="_blank"
               rel="noopener noreferrer"
-              className=" hover:text-gray-800 text-sm text-white"
+              className="text-sm text-white hover:text-gray-800"
             >
               @IYKE WEll VENTURES
             </a>
-            <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+            <span className="inline-flex justify-center mt-2 sm:ml-auto sm:mt-0 sm:justify-start">
               <FaFacebookF className="ml-3" />
               <FaTwitter className="ml-3" />
               <FaInstagram className="ml-3" />
